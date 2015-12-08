@@ -1,0 +1,36 @@
+{
+  "name": "html5-input-range",
+  "version": "1.0.0",
+  "description": "html5 input type range solution ",
+  "main": "gruntFile.js",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-less": "^1.0.1",
+    "load-grunt-tasks": "^3.3.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-connect": "^0.11.2",
+    "grunt-contrib-uglify": "^0.10.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "normalize.css": "^3.0.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/friedt/html5-input-range.git"
+  },
+  "keywords": [
+    "html5",
+    "javascript",
+    "less",
+    "css"
+  ],
+  "author": "pepijn friederichs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/friedt/html5-input-range/issues"
+  },
+  "homepage": "https://github.com/friedt/html5-input-range#readme"
+}
