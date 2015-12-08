@@ -1,0 +1,325 @@
+/* input[type=range]
+ styling on this element in all browsers
+ this element is used in combination with the 'subscription calculator' on greenwheels -- calculate-subscription.js
+ */
+
+
+
+@range-width : 200px;
+@range-width-wide : 600px;
+@range-height: 10px;
+@range-height-wide: 10px;
+@thumb-width: 30px;
+@thumb-height: 30px;
+@thumb-width-wide: 25px;
+@thumb-height-wide: 25px;
+@border-thumb-radius: 50%;
+@border-color: #ccc;
+@background:#528CE0;
+
+
+
+
+input[type=range] {
+
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    width: @range-width;
+    margin: 0;
+    height: @range-height;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    vertical-align: top;
+    background: transparent;
+
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-moz-focus-outer {
+    border: 0;
+}
+
+input[type=range]:active::-moz-range-track {
+    background: transparent;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+
+    //width: @range-width-wide;
+    border: 1px solid @border-color;
+    border-radius: 0px;
+    height: @range-height;
+
+}
+
+input[type="range"]::-moz-range-track {
+    //width: @range-width-wide;
+    background: transparent;
+    border: 1px solid @border-color;
+    border-radius: 0px;
+    height: @range-height;
+
+}
+
+input[type="range"]::-ms-track {
+
+    color: transparent;
+    background: transparent;
+    border-color: transparent;
+    height: @range-height;
+    border-width: 20px 0;
+
+}
+
+input[type=range]::-ms-fill-lower {
+    background: @background;
+    border-radius: 10px;
+
+}
+
+input[type=range]::-ms-fill-upper {
+    border: 1px solid @border-color;
+    border-radius: 10px;
+}
+
+input[type="range"]::-moz-range-thumb {
+    display: block;
+    position: relative;
+    z-index: 1000;
+    width: @thumb-width;
+    height: @thumb-height;
+    border: none;
+    border-radius: @border-thumb-radius;
+    background: @background;
+    cursor: pointer;
+
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    display: block;
+    position: relative;
+    z-index: 1000;
+    -webkit-appearance: none;
+    width: @thumb-width;
+    height: @thumb-height;
+    border: none;
+    border-radius: @border-thumb-radius;
+    background: @background;
+    cursor: pointer;
+    margin-top: -11px;
+
+}
+
+
+
+input[type="range"]::-ms-thumb {
+
+    width: @thumb-width;
+    height: @thumb-height;
+    border-radius: @border-thumb-radius;
+    border: 0;
+    background: @background;
+    cursor: pointer;
+}
+
+.range-slider {
+
+    margin-top:2em;
+
+    .slider-label {
+        display: inline-block;
+        width: 150px;
+
+    }
+    & > .box:first-child .slider-header{
+        margin: 0 0 1.5em 0;
+    }
+
+    img {
+        display: none;
+    }
+
+    .average-costs,
+    .total-costs {
+        color: @background;
+        display: inline-block;
+    }
+}
+
+.slider-header {
+    color: @border-color;
+    margin: 0 0 2.5em 0;
+
+
+}
+
+.slider-button{
+    margin: 0.5em 0;
+    text-transform: uppercase;
+    display: block;
+}
+
+.slider {
+    position: relative;
+    color: @border-color;
+    margin: 1em 0;
+    clear: both;
+    display: inline-block;
+
+    &__progress {
+        position: absolute;
+        z-index: 0;
+        display: block;
+        left: 0;
+        top: 0;
+        height: @range-height;
+        border: none;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        width: 0;
+        background-color: @background;
+
+    }
+
+    &__output {
+        position: absolute;
+        right: -25px;
+        top: -9px;
+        color: #000;
+    }
+
+    &__pointer {
+        position: absolute;
+        top: -25px;
+
+        &--start {
+            left: 0;
+        }
+        &--middle {
+            left: 49%;
+        }
+        &--end {
+            right: 0;
+        }
+    }
+
+    .end {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+}
+
+
+
+// ie10/11 only
+
+
+
+
+@media only screen and (min-width: 64em){
+    input[type=range] {
+        width: @range-width-wide;
+        height: @range-height-wide;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+        height: @range-height-wide;
+    }
+
+    input[type="range"]::-moz-range-track {
+        height: @range-height-wide;
+    }
+
+    input[type="range"]::-ms-track {
+        height: @range-height-wide;
+        border-width: 10px 0;
+    }
+
+    input[type=range]::-ms-fill-lower {
+        border-radius: 5px;
+    }
+
+    input[type=range]::-ms-fill-upper {
+        border-radius: 5px;
+    }
+
+    input[type="range"]::-moz-range-thumb {
+
+        width: @thumb-width-wide;
+        height: @thumb-height-wide;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+
+        width: @thumb-width-wide;
+        height: @thumb-height-wide;
+        margin-top: -9px;
+    }
+
+    input[type="range"]::-ms-thumb {
+
+        width: @thumb-width-wide;
+        height: @thumb-height-wide;
+    }
+
+    .range-slider {
+        img {
+            display: block;
+        }
+    }
+    .slider-left {
+        float: left;
+        width: 30%;
+    }
+    .slider-right {
+        float: right;
+        width: 70%;
+    }
+    .slider {
+
+        &__progress {
+
+            height: @range-height-wide;
+
+
+        }
+
+    }
+    .slider-table{
+        display: table;
+        table-layout: fixed;
+
+        &__cell:first-child{
+            width: 63%;
+            padding-right: 4em;
+        }
+
+        &__cell{
+            display: table-cell;
+            vertical-align: top;
+        }
+    }
+
+};
+
+
+//   ie10/11 only
+
+input[type=range], x::-ms-clear {
+    height: auto;
+}
+
+.slider {
+
+    &__progress, x::-ms-clear,
+    &__output, x::-ms-clear {
+        display: none;
+    }
+
+}
+
