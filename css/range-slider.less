@@ -3,8 +3,6 @@
  this element is used in combination with  range-slider.js
  */
 
-
-
 @range-width : 200px;
 @range-width-wide : 600px;
 @range-height: 10px;
@@ -15,10 +13,7 @@
 @thumb-height-wide: 25px;
 @border-thumb-radius: 50%;
 @border-color: #ccc;
-@background:#528CE0;
-
-
-
+@background: #528CE0;
 
 input[type=range] {
 
@@ -49,7 +44,6 @@ input[type=range]:active::-moz-range-track {
 
 input[type=range]::-webkit-slider-runnable-track {
 
-    //width: @range-width-wide;
     border: 1px solid @border-color;
     border-radius: 0px;
     height: @range-height;
@@ -57,7 +51,7 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 
 input[type="range"]::-moz-range-track {
-    //width: @range-width-wide;
+
     background: transparent;
     border: 1px solid @border-color;
     border-radius: 0px;
@@ -114,8 +108,6 @@ input[type="range"]::-webkit-slider-thumb {
 
 }
 
-
-
 input[type="range"]::-ms-thumb {
 
     width: @thumb-width;
@@ -128,14 +120,14 @@ input[type="range"]::-ms-thumb {
 
 .range-slider {
 
-    margin-top:2em;
+    margin-top: 2em;
 
     .slider-label {
         display: inline-block;
         width: 150px;
 
     }
-    & > .box:first-child .slider-header{
+    & > .box:first-child .slider-header {
         margin: 0 0 1.5em 0;
     }
 
@@ -143,21 +135,15 @@ input[type="range"]::-ms-thumb {
         display: none;
     }
 
-    .average-costs,
-    .total-costs {
-        color: @background;
-        display: inline-block;
-    }
 }
 
 .slider-header {
     color: @border-color;
     margin: 0 0 2.5em 0;
 
-
 }
 
-.slider-button{
+.slider-button {
     margin: 0.5em 0;
     text-transform: uppercase;
     display: block;
@@ -214,14 +200,9 @@ input[type="range"]::-ms-thumb {
 
 }
 
-
-
 // ie10/11 only
 
-
-
-
-@media only screen and (min-width: 64em){
+@media only screen and (min-width: 64em) {
     input[type=range] {
         width: @range-width-wide;
         height: @range-height-wide;
@@ -272,41 +253,45 @@ input[type="range"]::-ms-thumb {
             display: block;
         }
     }
+
     .slider-left {
         float: left;
         width: 30%;
     }
+
     .slider-right {
         float: right;
         width: 70%;
     }
+
     .slider {
 
         &__progress {
 
             height: @range-height-wide;
 
-
         }
 
     }
-    .slider-table{
+
+    .slider-table {
         display: table;
         table-layout: fixed;
 
-        &__cell:first-child{
+        &__cell:first-child {
             width: 63%;
             padding-right: 4em;
         }
 
-        &__cell{
+        &__cell {
             display: table-cell;
             vertical-align: top;
         }
     }
 
-};
+}
 
+;
 
 //   ie10/11 only
 
