@@ -2,7 +2,7 @@
  * Created by pepijn on 08-12-15.
  */
 
-function calculateSubscription() {
+function initRangeSlider() {
 	'use strict';
 	var sliderForm = document.getElementById('html5-range-slider');
 	if (sliderForm === null) {
@@ -133,7 +133,7 @@ function calculateSubscription() {
 
 document.addEventListener('DOMContentLoaded',function() {
 
-	calculateSubscription();
+	initRangeSlider();
 
 });
 
