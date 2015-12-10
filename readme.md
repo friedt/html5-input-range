@@ -6,7 +6,7 @@
 <li>It consists of a less file, html snippet and plain(vanilla) javascript</li>
 <li>It has a coloured progress(track)</li>
 <li>This solution will support all modern browsers / IE10+ and has a uniform look</li>
-<li>If a working fallback for older browsers is needed it must be added</li>
+<li>The fallback is input type=text, if a working fallback for older browsers is needed it must be added, this will be fixed later </li>
 </ul>
 
 <p>More details about how to use it will follow...</p>
