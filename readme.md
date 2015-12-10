@@ -4,6 +4,7 @@
 </p>
 <ul>
 <li>It consists of a less file, html snippet and plain(vanilla) javascript</li>
+<li>Minor changes in the css is needed to customize the layout to your needs</li>
 <li>It has a coloured progress(track)</li>
 <li>This solution will support all modern browsers / IE10+ and has a uniform look</li>
 <li>The fallback is input type=text, if a working fallback for older browsers is needed it must be added, this will be fixed later </li>
