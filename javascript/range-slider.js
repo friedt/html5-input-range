@@ -12,6 +12,7 @@ function initRangeSlider() {
 		sliderValue,
 		sliders = sliderForm.querySelectorAll('.slider__input'),
 		output,
+		requestInput = document.querySelector('.output'),
 		step, max,
 		isTouch = (('ontouchstart' in window) || (navigator.MaxTouchPoints > 0));
 
@@ -87,6 +88,7 @@ function initRangeSlider() {
 
 	function getAllSliderValues() {
 		var arrayVal = [];
+
 		for (var i = 0; i < slidersLen; i++) {
 			var val = sliders[i].value;
 
@@ -94,6 +96,8 @@ function initRangeSlider() {
 
 		}
 		console.info(arrayVal)
+		requestInput.innerHTML = arrayVal;
+
 		return arrayVal;
 	}
 

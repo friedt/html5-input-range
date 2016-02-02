@@ -25,6 +25,12 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		copy: {
+			html: {
+				src: 'html/range-slider.html',
+				dest: 'dist/index.html'
+			}
+		},
 		uglify: {
 			options: {
 				mangle: false
@@ -38,7 +44,7 @@ module.exports = function(grunt) {
 		watch: {
 			css: {
 				files: ['**/*.less','**/*.js', '**/*.html'],
-				tasks: ['less','uglify'],
+				tasks: ['less','copy','uglify'],
 				options: {
 					livereload: true
 				}
