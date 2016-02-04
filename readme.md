@@ -5,7 +5,7 @@
 <ul>
 <li>It consists of a less file, html snippet and plain(vanilla) javascript</li>
 <li>the number of input elements is flexible, all values will be gathered to do a single post to your backend</li>
-<li>Minor changes in the css is needed to customize the layout to your needs</li>
+<li>Minor changes in the css are needed to customize the layout to your needs (form layout). </li>
 <li>It has a coloured progress(track)</li>
 <li>This solution will support all modern browsers / IE10+ and has a uniform look</li>
 <li>The fallback is input type=text, if a working fallback for older browsers is needed it must be added, this will be fixed later </li>
