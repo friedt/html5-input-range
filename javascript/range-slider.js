@@ -134,11 +134,7 @@ function initRangeSlider() {
 	}
 
 }
-
-document.addEventListener('DOMContentLoaded',function() {
-
-	initRangeSlider();
-
-});
+//document ready
+document.addEventListener('DOMContentLoaded', initRangeSlider);
 
 

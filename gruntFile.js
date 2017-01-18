@@ -19,7 +19,12 @@ module.exports = function (grunt) {
             server: {
                 options: {
                     port: 9002,
-                    base: ''
+                    protocol: 'http',
+                    useAvailablePort: true,
+                    base: 'dist/',
+                    hostname: 'localhost',
+                    debug: true,
+                    open: true
                 }
             }
         },
@@ -29,15 +34,20 @@ module.exports = function (grunt) {
                 mangle: false
             },
             dist: {
-                files: {
-                    'dist/range-slider.min.js': ['javascript/*.js']
-                }
+                files: [{
+                    'dist/range-slider.min.js': ['javascript/*-slider.js']
+                },
+                {
+                    'dist/range-slider-object.min.js': ['javascript/*-object.js']
+                }]
             }
         },
         copy: {
-            html: {
-                src: 'html/range-slider.html',
-                dest: 'dist/index.html'
+            html:  {
+                expand: true,
+                cwd: 'html/',
+                src: ['*.html'],
+                dest: 'dist/'
             }
         },
         watch: {
