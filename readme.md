@@ -11,5 +11,7 @@
 <li>The fallback is input type=text, if a working fallback for older browsers is needed it must be added, this will be fixed later </li>
 </ul>
 
+<p>There is a range-slider-object.js added which can be instantiated as a new object </p>
+
 <p>More details about how to use it will follow...</p>
 
